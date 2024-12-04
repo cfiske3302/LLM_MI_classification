@@ -77,7 +77,10 @@
 You will be given the therapists side of an interaction. For each therapist utterance, classify the behavior that the therapist is most likely demonstrating. Return only the behavior code as a python list.
 
 Example:
-Therapists: ["This may not seem important to you, but I'm worried about your plan to move back to your old neighborhood.", "How might you be able to do that?", "Don't say that!", 'I usually meet with clients once a week for 10 weeks.']
+Therapists: ["This may not seem important to you, but I'm worried about your plan to move back to your old neighborhood.",
+	"How might you be able to do that?",
+	"Don't say that!",
+	'I usually meet with clients once a week for 10 weeks.']
 response: 
 [RCP, QUO, DI, ST]
 
