@@ -30,9 +30,10 @@ def read_dict_list(path):
             dict_list.append(js)
     return dict_list
 
-def get_completion_from_messages(messages, temperature=0.7):
+def get_completion_from_messages(messages, temperature=0):
     openai.api_key = os.environ["OPENAI_API_KEY"]
-    model = 'gpt-4'
+    model = 'gpt4o'
+    # model = 'gpt-4'
     for i in range(3):
         try:
             response = openai.ChatCompletion.create(
