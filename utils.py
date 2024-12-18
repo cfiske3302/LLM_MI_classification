@@ -30,9 +30,8 @@ def read_dict_list(path):
             dict_list.append(js)
     return dict_list
 
-def get_completion_from_messages(messages, temperature=0):
+def get_completion_from_messages(messages, temperature=0, model='gpt-4o-mini'):
     openai.api_key = os.environ["OPENAI_API_KEY"]
-    model = 'gpt4o'
     # model = 'gpt-4'
     for i in range(3):
         try:
@@ -44,6 +43,6 @@ def get_completion_from_messages(messages, temperature=0):
             return response.choices[0].message["content"]
         except Exception as e:
             if i == 2:
-                print(e)
+                print(f"recieved error response: {e}")
                 return 'error'
             time.sleep(3*(2**i))
